@@ -1,25 +1,23 @@
 <?php
-
 class registration {
-private $email;
-private $confirm_email;
-private $password;
+    private $email;
+    private $password;
+    private $confirm_password;
 
-// i will create a constructor
-
-public function _construct($email , $confirm_email , $password){
-    $this->$email = $email;
-    $this->$confirm_email = $confirm_email;
-    $this->$password = $password;
+public function __construct($email , $password , $confirm_password){
+$this->$email = $email
+$this->$password = $password;
+$this->$confirm_password = $confirm_password;
 }
 
-private function emptyInput(){
-    $result;
-    if (empty($this->$email) || empty($this->$confirm_email) || empty($this->$password) ){
-      $result = false;
-    }else{
-        $result= true;
-    }
-    return $result;
+private function inputchecker (){
+ $result;
+ if (empty($this->$email) || empty($this->$password) || empty($this->$confirm_password) || ) {
+  $result = false;
+ }else {
+    $result =  true;
+
+ }
+return $result;
 }
 }

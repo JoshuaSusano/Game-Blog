@@ -1,17 +1,19 @@
 <?php
-if (isset($_POST["submit"]))
-{
-$email = $_POST["email"];
-$confirm_email = $_POST["confirm_email"];
-$password = $_POST["password"];
+if(isset($_POST["submit"])){
 
-//Instiantiate Register
-include "../classes/registration-classes.php";
-$registration = new registration($email , $confirm_email , $password);
+    // Grabbing Data 
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $confirm_password = $_POST["confirm_password"];
+    
+    
+    // Instantiate the RegistrationControl Class
+    include "../classes/registration-contr-classes.php";
+    include "../classes/registration.php";
+    $register = new registration($email , $password , $confirm_password);
+    // Error catcher
+    
 
+    // Displaying data
 
-// Running error controls
-
-
-// Going back to frontpage
 }
